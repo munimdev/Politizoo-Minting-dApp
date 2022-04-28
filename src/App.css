@@ -1,0 +1,85 @@
+:root {
+  --borderWidth: 3px;
+  --borderWidthSm: 2px;
+}
+
+.hidden-btn {
+  display: none;
+}
+
+.feed-post:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    73deg,
+    #ff0000,
+    #ff0000,
+    #ab4a4a,
+    #ff0000,
+    #ffffff,
+    #ff0000,
+    #ff0000,
+    #ff0000
+  );
+  border-radius: 12px;
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+.font_mk {
+  font-size: 20px;
+}
+
+.rarity__type.gradient {
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.feed-rte p:last-child {
+  margin-bottom: 0;
+}
+
+.twinkling {
+  animation: move-twink-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+/*Minting hero styles*/
+
+.mint-form__input {
+  pointer-events: none;
+}
